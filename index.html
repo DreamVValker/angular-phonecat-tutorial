@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="phonecatApp">
+<html ng-app="phonecatApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="bootstrap.min.css.map" />
     <script src="angular.min.js"></script>
-    <script src="index.js"></script>
+    <script src="app.js"></script>
+    <script src="phone-list.component.js"></script>
     <title>Angular-phonecat</title>
   </head>
-  <body ng-controller="PhoneListController">
-    <ul>
-      <li ng-repeat="phone in phones">
-        <span>{{ phone.name }}</span>
-        <p>{{ phone.snippet }}</p>
-      </li>
-    </ul>
-    <p>Total number of phones: {{ phones.length }}</p>
-    <p>Hello, {{ name }}</p>
-    <table>
-      <tr ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8]">
-        <td ng-repeat="i in [1, 2, 3, 4, 5, 6, 7, 8]">{{ i }}</td>
-      </tr>
-    </table>
+  <body>
+    <phone-list></phone-list>
   </body>
 </html>
